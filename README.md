@@ -1,202 +1,214 @@
-# Welcome to your Lovable project
+<div align="center">
 
-## Project info
+# 💸 SmartSpendSnap
 
-**URL**: https://lovable.dev/projects/c5025e70-2359-4071-ae40-cf7be16f1808
+### AI-Powered Personal Finance Tracker — Scan, Track & Save Smarter
 
-## How can I edit this code?
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Firebase](https://img.shields.io/badge/Firebase-Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![Gemini AI](https://img.shields.io/badge/Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-There are several ways of editing your application.
+<br/>
 
-**Use Lovable**
+**[🐛 Report Bug](https://github.com/JayeshJadhav28/smart-spend-snap/issues) · [✨ Request Feature](https://github.com/JayeshJadhav28/smart-spend-snap/issues) · [👤 Portfolio](https://jayeshjadhav.com/)**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c5025e70-2359-4071-ae40-cf7be16f1808) and start prompting.
+<br/>
 
-Changes made via Lovable will be committed automatically to this repo.
+<img src="./public/sss.png" alt="SmartSpendSnap Demo" width="90%" style="border-radius:12px;" />
 
-**Use your preferred IDE**
+</div>
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📌 Table of Contents
 
-Follow these steps:
+- [About](#-about)
+- [System Architecture](#-system-architecture)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [Author](#-author)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧠 About
 
-# Step 3: Install the necessary dependencies.
-npm i
+**SmartSpendSnap** is an AI-powered personal finance web application built to make expense tracking effortless and intelligent. Many people struggle with money management — manual tracking is tedious, error-prone, and rarely provides useful insights.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+SmartSpendSnap changes that by combining **Google Gemini AI**, **real-time Firestore**, and **interactive data visualization** into one clean, beginner-friendly dashboard.
+
+> Scan a receipt → AI extracts the data → Get personalized savings tips. Done. 💡
+
+**Built at a Hackathon** — tackling real-world financial literacy challenges for students, professionals, and families.
+
+---
+
+## 🗺 System Architecture
+
+```
+Authentication → Dashboard
+                    ├── Show Saving Rate
+                    ├── Show Expense / Income / Balance
+                    ├── Financial Tips
+                    └── Transaction Input Methods
+                            ├── Manually Input Transaction
+                            ├── Scan Receipt with Camera
+                            └── Import Transactions from Device
+                                        ↓
+                              [ GEMINI AI PROCESSING ]
+                                ├── Process Scanned Receipts
+                                ├── Extract Data from Receipts (OCR)
+                                └── Generate Personalized Suggestions
+                                        ↓
+                    ├── Visualize Spending Data → Spending Trends
+                    └── Show Gemini AI Suggestions
+```
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 📷 **Receipt Scanner** | Capture or upload receipts — Gemini AI extracts all transaction data via OCR |
+| 🤖 **AI Suggestions** | Real-time personalized savings tips & spending alerts powered by Gemini |
+| 🗂️ **Auto-Categorisation** | Income & expenses automatically sorted into categories |
+| 📊 **Visual Reports** | Interactive charts (pie, monthly overview) built with Recharts |
+| 📥 **Gmail Integration** | Scan your inbox for digital receipts automatically |
+| 📄 **Spreadsheet Export** | Export all transactions as a downloadable spreadsheet |
+| 💱 **Currency Converter** | On-the-go multi-currency support |
+| 🔐 **Secure Auth** | Firebase Authentication — Google login & email/password |
+| 📱 **Responsive Design** | Fully optimised for mobile, tablet & desktop |
+
+---
+
+## 🛠 Tech Stack
+
+<div align="center">
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) |
+| **Build Tool** | [Vite](https://vitejs.dev/) |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) |
+| **AI / OCR** | [Google Gemini API](https://ai.google.dev/) |
+| **Backend** | [Node.js](https://nodejs.org/) + [Express.js](https://expressjs.com/) |
+| **Auth** | [Firebase Authentication](https://firebase.google.com/docs/auth) |
+| **Database** | [Firestore](https://firebase.google.com/docs/firestore) (Real-time) |
+| **Charts** | [Recharts](https://recharts.org/) |
+| **Gmail API** | Google OAuth2 — inbox receipt scanning |
+
+</div>
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+```bash
+node  >= 18.x
+npm   >= 9.x
+```
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/JayeshJadhav28/smart-spend-snap.git
+
+# 2. Navigate into the project
+cd smart-spend-snap
+
+# 3. Install dependencies
+npm install
+
+# 4. Set up environment variables
+cp .env
+
+# 5. Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:5173](http://localhost:5173) 🎉
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+```bash
+npm run dev        # Start Vite dev server
+npm run build      # Build for production
+npm run preview    # Preview production build
+npm run lint       # Run ESLint
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c5025e70-2359-4071-ae40-cf7be16f1808) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📁 Project Structure
 
 ```
-smart-spend-snap-main
-├─ bun.lockb
-├─ components.json
-├─ eslint.config.js
-├─ index.html
-├─ newsApi.js
-├─ package-lock.json
-├─ package.json
-├─ postcss.config.js
-├─ public
-│  ├─ favicon.ico
-│  ├─ placeholder.svg
-│  └─ robots.txt
-├─ README.md
-├─ server
-├─ src
-│  ├─ api
-│  │  └─ auth.ts
-│  ├─ app
-│  │  ├─ api
-│  │  │  └─ gmail
-│  │  │     ├─ auth
-│  │  │     ├─ callback
-│  │  │     └─ search-receipts
-│  │  └─ settings
-│  ├─ App.css
-│  ├─ App.tsx
-│  ├─ components
-│  │  ├─ charts
-│  │  │  ├─ CategoryPieChart.tsx
-│  │  │  └─ MonthlyOverviewChart.tsx
-│  │  ├─ dashboard
-│  │  ├─ ExpensePieChart.tsx
-│  │  ├─ FinancialTips.tsx
-│  │  ├─ GmailIntegration.tsx
-│  │  ├─ Layout.tsx
-│  │  ├─ reports
-│  │  │  └─ MonthlyReport.tsx
-│  │  └─ ui
-│  │     ├─ accordion.tsx
-│  │     ├─ alert-dialog.tsx
-│  │     ├─ alert.tsx
-│  │     ├─ aspect-ratio.tsx
-│  │     ├─ avatar.tsx
-│  │     ├─ badge.tsx
-│  │     ├─ breadcrumb.tsx
-│  │     ├─ button.tsx
-│  │     ├─ calendar.tsx
-│  │     ├─ camera.tsx
-│  │     ├─ card.tsx
-│  │     ├─ carousel.tsx
-│  │     ├─ chart.tsx
-│  │     ├─ checkbox.tsx
-│  │     ├─ collapsible.tsx
-│  │     ├─ command.tsx
-│  │     ├─ context-menu.tsx
-│  │     ├─ dialog.tsx
-│  │     ├─ drawer.tsx
-│  │     ├─ dropdown-menu.tsx
-│  │     ├─ form.tsx
-│  │     ├─ hover-card.tsx
-│  │     ├─ input-otp.tsx
-│  │     ├─ input.tsx
-│  │     ├─ label.tsx
-│  │     ├─ menubar.tsx
-│  │     ├─ navigation-menu.tsx
-│  │     ├─ pagination.tsx
-│  │     ├─ popover.tsx
-│  │     ├─ progress.tsx
-│  │     ├─ radio-group.tsx
-│  │     ├─ resizable.tsx
-│  │     ├─ scroll-area.tsx
-│  │     ├─ select.tsx
-│  │     ├─ separator.tsx
-│  │     ├─ sheet.tsx
-│  │     ├─ sidebar.tsx
-│  │     ├─ skeleton.tsx
-│  │     ├─ slider.tsx
-│  │     ├─ sonner.tsx
-│  │     ├─ switch.tsx
-│  │     ├─ table.tsx
-│  │     ├─ tabs.tsx
-│  │     ├─ textarea.tsx
-│  │     ├─ toast.tsx
-│  │     ├─ toaster.tsx
-│  │     ├─ toggle-group.tsx
-│  │     ├─ toggle.tsx
-│  │     ├─ tooltip.tsx
-│  │     └─ use-toast.ts
-│  ├─ context
-│  │  └─ AuthContext.tsx
-│  ├─ hooks
-│  │  ├─ use-mobile.tsx
-│  │  ├─ use-toast.ts
-│  │  └─ useTransactions.ts
-│  ├─ index.css
-│  ├─ lib
-│  │  ├─ currency.ts
-│  │  ├─ env.ts
-│  │  ├─ firebase.ts
-│  │  ├─ gemini.ts
-│  │  ├─ gmail.ts
-│  │  └─ utils.ts
-│  ├─ main.tsx
-│  ├─ pages
-│  │  ├─ AddTransaction.tsx
-│  │  ├─ api
-│  │  │  └─ auth
-│  │  │     └─ callback.ts
-│  │  ├─ Dashboard.tsx
-│  │  ├─ Index.tsx
-│  │  ├─ Login.tsx
-│  │  ├─ NotFound.tsx
-│  │  ├─ Reports.tsx
-│  │  ├─ Settings.tsx
-│  │  └─ Signup.tsx
-│  ├─ types
-│  │  ├─ index.ts
-│  │  └─ transaction.ts
-│  └─ vite-env.d.ts
-├─ tailwind.config.ts
-├─ tsconfig.app.json
-├─ tsconfig.json
-├─ tsconfig.node.json
-└─ vite.config.ts
-
+smart-spend-snap/
+├── public/                    # Static assets
+├── src/
+│   ├── api/                   # Auth API helpers
+│   ├── components/
+│   │   ├── charts/            # Recharts components
+│   │   │   ├── CategoryPieChart.tsx
+│   │   │   └── MonthlyOverviewChart.tsx
+│   │   ├── FinancialTips.tsx  # AI tips display
+│   │   ├── GmailIntegration.tsx
+│   │   ├── Layout.tsx
+│   │   └── ui/                # shadcn/ui components
+│   ├── context/
+│   │   └── AuthContext.tsx    # Global auth state
+│   ├── hooks/                 # Custom React hooks
+│   ├── lib/
+│   │   ├── firebase.ts        # Firebase init
+│   │   ├── gemini.ts          # Gemini AI integration ⭐
+│   │   ├── gmail.ts           # Gmail API integration
+│   │   └── currency.ts        # Currency conversion
+│   ├── pages/                 # App pages / routes
+│   │   ├── Dashboard.tsx      # ⭐ Main dashboard
+│   │   ├── AddTransaction.tsx
+│   │   ├── Reports.tsx
+│   │   └── Login / Signup
+│   └── types/                 # TypeScript interfaces
+├── .env.example               # ✅ Safe env template
+├── vite.config.ts
+└── tailwind.config.ts
 ```
+
+---
+
+## 🤝 Contributing
+
+```bash
+git checkout -b feature/your-feature-name
+git commit -m "feat: your feature description"
+git push origin feature/your-feature-name
+# Open a Pull Request 🚀
+```
+
+---
+
+## 👤 Author
+
+**Jayesh Jadhav**
+
+[![GitHub](https://img.shields.io/badge/GitHub-JayeshJadhav28-181717?style=flat-square&logo=github)](https://github.com/JayeshJadhav28)
+[![Portfolio](https://img.shields.io/badge/Portfolio-jayeshjadhav.com-0A66C2?style=flat-square&logo=google-chrome&logoColor=white)](https://jayeshjadhav.com/)
+
+---
+
+<div align="center">
+
+⭐ **If SmartSpendSnap helped you, drop a star!** ⭐
+
+Built with ❤️, React & Gemini AI — at a Hackathon 🏆
+
+</div>
