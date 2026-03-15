@@ -7,13 +7,13 @@ import { Transaction } from '@/types/transaction';
 
 // Firebase configuration with the provided credentials
 const firebaseConfig = {
-  apiKey: "AIzaSyDmbFLZiM_K-HNkoGhWjP4R3BrhQ-wtxAU",
-  authDomain: "bytebill-96de7.firebaseapp.com",
-  projectId: "bytebill-96de7",
-  storageBucket: "bytebill-96de7.firebasestorage.app",
-  messagingSenderId: "238074188673",
-  appId: "1:238074188673:web:bf8f7757ba8d63a1cfce80",
-  measurementId: "G-4MKT4ET2YW"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
