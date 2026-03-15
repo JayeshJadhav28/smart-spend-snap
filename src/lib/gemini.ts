@@ -1,7 +1,7 @@
 // Gemini AI service integration
-const GEMINI_API_KEY = "AIzaSyC-lrO7LdB0tkWcUIoiCBhI3Dgs_OeEUXI";
-const GEMINI_VISION_API_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent';
-const GEMINI_PRO_API_URL = 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent';
+const GEMINI_API_KEY = "";
+const GEMINI_VISION_API_URL = '';
+const GEMINI_PRO_API_URL = '';
 
 // Rate limiting configuration
 const RATE_LIMIT = {
